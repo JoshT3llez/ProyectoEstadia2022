@@ -14,16 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('eventos', function (Blueprint $table) {
-            $table->bigIncrements('id_evento');	
+            $table->id();
             $table->string('nombre');
-            $table->string('apellidos');
-            $table->dateTime('fechaInicio');
-            $table->dateTime('fechaTermi');
+            $table->dateTime('FechaIn',0);
+            $table->dateTime('FechaTer',0);
             $table->string('LinkFace');
             $table->string('LinkTwit');
             $table->string('LinkInsta');
-            $table->string('Descripcion',200);
-            $table->string('id_imagen');
+            $table->string('Descripcion');
+            $table->string('imagen');
             $table->timestamps();
         });
     }
